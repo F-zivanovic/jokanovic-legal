@@ -14,10 +14,10 @@ body {
   font-size: 100%;
   overflow-x: hidden;
   line-height: 1.4;
-  color: #979797;
+  color: #868686;
   font-family: "Poppins", sans-serif;
 }
-@media (width < 576px) {
+@media (max-width: 576px) {
   body {
     font-size: 85%;
   }
@@ -29,6 +29,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Playfair Display", serif;
   text-transform: capitalize;
   text-wrap: balance;
 }
@@ -48,60 +49,49 @@ a {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 @media (max-width: 576px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
 }
 
 .top-nav {
-  background-color: #262626;
-  padding: 0;
-}
-.top-nav__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-flow: row nowrap;
   gap: 0;
+  padding: 1.5rem 0;
 }
-.top-nav__item {
+@media (max-width: 1200px) {
+  .top-nav {
+    display: none;
+  }
+}
+.top-nav__contact {
   display: flex;
-  gap: 1rem;
+  gap: 1.8rem;
 }
-.top-nav__item--info span {
-  color: #979797;
+.top-nav__link {
+  color: #868686;
 }
-.top-nav__icon {
-  font-size: 0.9rem;
-  color: #e3b723;
+.top-nav__link:hover {
+  color: #3c3e6b;
 }
-.top-nav__icon:hover {
-  color: #979797;
-}
-.top-nav__item--social {
-  display: flex;
-  align-items: center;
-}
-.top-nav__btn {
-  background-color: #e3b723;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  padding: 1rem 1.5rem;
-  color: #fff;
+.top-nav .icon {
+  margin-right: 0.1rem;
+  font-size: 15px;
 }
 
 .hero {
-  background: linear-gradient(rgba(38, 38, 38, 0.5), rgba(38, 38, 38, 0.5)), url("../../src/img/logo/3.jpg");
-  height: 100vh;
-  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../src/img/hero.jpg");
+  height: 110vh;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */

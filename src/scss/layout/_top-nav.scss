@@ -1,0 +1,28 @@
+@use '../abstract/index' as *;
+
+.top-nav{
+    @include flex(space-between);
+    padding: 1.5rem 0;
+
+    @include rwd(1200){
+        display: none;
+    }
+
+    &__contact{
+        display: flex;
+        gap: 1.8rem;
+    }
+
+    &__link{
+        color: $text-color;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+    .icon{
+        margin-right: 0.1rem;
+        font-size: 15px;
+    }
+}

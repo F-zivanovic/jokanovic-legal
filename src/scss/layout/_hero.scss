@@ -1,0 +1,11 @@
+@use '../abstract/index' as *;
+
+
+.hero{
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url('../../src/img/hero.jpg');
+    height: 110vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // linear-gradient(rgba(60, 62, 107, 0.6), rgb(60, 62, 107, 0.6)),
+}
