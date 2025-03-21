@@ -2,7 +2,8 @@
 
 .top-nav{
     @include flex(space-between);
-    padding: 1.5rem 0;
+    padding: 1.5rem 10%;
+    background-color: $primary-color;
 
     @include rwd(1200){
         display: none;
@@ -13,8 +14,8 @@
         gap: 1.8rem;
     }
 
-    &__link{
-        color: $text-color;
+    &__link,p{
+        color: #fff;
 
         &:hover{
             color: $primary-color;
