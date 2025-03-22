@@ -1,0 +1,63 @@
+@use '../abstract/index' as *;
+
+.cta{
+    background-image:linear-gradient(rgba(60, 62, 107, 0.8), rgba(60, 62, 107, 0.8)), url('../../src/img/cta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+
+
+    &__wrapper{
+        border: 1px solid $text-color;
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 10rem;
+
+    }
+
+    &__heading{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text{
+        max-width: 750px;
+        line-height: 1.7;
+        margin: auto;
+    }
+
+    &__body{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__info{
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__desc{
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 0.5rem;
+    }
+
+    &__btn{
+        padding: 16px 25px 18px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        // margin-left: 15px;
+        background-color: #fff;
+        color: $primary-color;
+        align-self: center;
+        margin-top: 1rem;
+    }
+}

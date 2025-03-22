@@ -1,0 +1,57 @@
+@use '../abstract/index' as *;
+
+.service{
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    color: #000;
+
+
+    @include rwd(992){ flex-direction: column; }
+
+    &__item{
+        flex: 3;
+        
+        &--aside{ 
+            flex: 1 ;
+            
+            @include rwd(992){ order: 3;}
+        }
+    }
+
+  
+    &__subtitle{
+        text-transform: uppercase;
+        font-size: 1rem;
+        // letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+
+    &__text{
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+
+        &--divider{ margin-top: 1.5rem; }
+    }
+
+    &__list{
+        margin-bottom: 1.5rem;
+        text-align: justify;
+
+        span{ font-weight: bold; }
+
+        li{
+            padding-left: 1rem;
+            border-left: 2px solid $primary-color;
+
+            &:not(:last-child){ margin-bottom: 1rem; }
+        }
+    }
+
+    &__link{
+        color: $text-color;
+
+        &:hover{ color: $primary-color; }
+    }
+}

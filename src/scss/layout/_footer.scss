@@ -1,0 +1,36 @@
+@use '../abstract/index' as *;
+
+.footer{
+    padding: 70px 0 0;
+    border-top: 2px solid $primary-color;
+    // background-color: #1d1d1d;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        row-gap: 3rem;
+        padding-bottom: 4rem;
+
+        @include rwd(1200){ flex-direction: column; }
+    }
+
+    &__item{ flex: 0 0 22%; }
+
+    &__title{
+        color: $primary-color;
+        margin-bottom: 2rem;
+    }
+
+
+    &__list{ @include flex(flex-start, stretch, column, 0.5rem); }
+
+    &__link{
+        display: block;
+        color: $text-color;
+
+        // &:hover,
+        // &:focus{ color: #fff;}
+    }
+
+ 
+}

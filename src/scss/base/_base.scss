@@ -10,6 +10,8 @@
   border: none;
   outline: none;
   resize: none;
+  font-family: "Poppins", sans-serif;
+
 }
 
 body {
@@ -17,7 +19,6 @@ body {
   overflow-x: hidden;
   line-height: 1.4;
   color: $text-color;
-  font-family: "Poppins", sans-serif;
 
   @include rwd(576) {
     font-size: 85%;
@@ -31,7 +32,7 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
-  text-transform: capitalize;
+  // text-transform: capitalize;
   // text-wrap: balance;
 }
 
