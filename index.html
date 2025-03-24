@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <meta name="description" content="">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/css/main.css">
 
@@ -29,25 +31,26 @@
 
 
     <!-- Top nav section starts -->
-    <section class="top-nav ">
+    <section class="top-nav">
         <div class="top-nav__contact">
             <a href="tel:+381644631503" class="top-nav__link">
-                <span class="fa-solid fa-phone icon"></span>
+                <span class="fa-solid fa-phone" aria-hidden="true"></span>
                 +381644631503
             </a>
 
             <a href="mailto:angelina.pesic93@gmail.com" class="top-nav__link">
-                <span class="fa-solid fa-envelope icon"></span>
+                <span class="fa-solid fa-envelope" aria-hidden="true"></span>
                 angelina.pesic93@gmail.com
             </a>
         </div>
 
-        <p class="top-nav__time">
-            <span class="fa-solid fa-clock icon"></span>
-            Pon - Pet 09:00-17:00
+        <p class="top-nav__location">
+            <span class="fa-solid fa-location-dot" aria-hidden="true"></span>
+            Dragoslava Srejovica 187E, Beograd, Zvezdara
         </p>
     </section>
     <!-- Top nav section ends -->
+
 
 
 
@@ -56,36 +59,34 @@
     <section class="hero">
 
         <nav class="nav container">
-            <!-- <div class="nav__top">
-                <a href="index.html" class="nav__logo">
-                    <img src="src/img/logo.svg" alt="" width="90px" height="90px">
-                </a>
-                <a href="#consultation" class="nav__btn">online konsultacije</a>
-            </div> -->
 
             <a href="index.html" class="nav__logo">
-                <img src="src/img/logo.svg" alt="" width="90px" height="90px">
+                <img src="src/img/advokatska-kancelarija-beograd-logo.webp" alt="Advokatska kancelarija Jokanović Beograd - logo" class="nav__img" width="90px" height="90px">
             </a>
 
             <ul class="nav__list">
                 <li><a href="index.html" class="nav__link">Početna</a></li>
                 <li><a href="#about" class="nav__link">O nama</a></li>
                 <li><a href="#contact" class="nav__link">Kontakt</a></li>
-                <li><a href="#" class="nav__link">Blog</a></li>
-                <li><a href="#" class="nav__link">Usluge</a></li>
+                <li><a href="#services" class="nav__link">Usluge</a></li>
+                <li><a href="#consultation" class="nav__link nav__btn">online konsultacije</a></li>
             </ul>
 
-            <a href="#consultation" class="nav__btn">online konsultacije</a>
+            <span class="fa-solid fa-bars nav__hamburger" id="hamburger"></span>
 
         </nav>
 
         <div class="hero__wrapper container">
             <p class="hero__name">Angelina Jokanović</p>
             <h1 class="hero__heading">Advokatska kancelarija Jokanović Beograd</h1>
-            <a href="#contact" class="hero__btn">kontakt</a>
+            <a href="#contact" class="hero__btn">kontaktirajte nas</a>
         </div>
+
     </section>
     <!-- Hero section ends -->
+
+
+
 
 
     <!-- About section starts -->
@@ -97,6 +98,7 @@
                 Advokatska kancelarija Jokanović je visoko profesionalna kancelarija koja ima za cilj da
                  pruži vrhunsku pravnu podršku klijentima, zasnovanu na stručnosti, integritetu i poverenju.            
             </p>
+
             <p class="about__text">
                 Sa dugogodišnjim iskustvom u različitim oblastima prava, naša kancelarija je posvećena pružanju efikasnih i pravovremenih rešenja koja su u najboljem interesu klijenata.
             </p>
@@ -124,22 +126,20 @@
             <a href="#contact" class="about__btn">kontakt</a>
         </article>
 
-        <img src="src/img/IMG_0040-removebg-preview.png" alt="" class="about__img">
+        <img src="src/img/advokat-beograd-angelina-jokanovic.png" alt="Angelina Jokanović - Advokat Beograd" class="about__img">
 
     </section>
     <!-- About section ends -->
 
 
+
+
+
     <!-- Services section starts -->
     <section class="services container" id="services">
 
-        <!-- Header part -->
-        <header class="services__header">
-            <p class="services__subheading">What we are expert at</p>
-            <h2 class="services__heading">Pravne oblasti</h2>
-        </header>
+         <h2 class="services__heading">Pravne oblasti</h2>
 
-        <!-- Main part -->
          <ul class="services__list">
             <li class="services__item">
                 <span class="fi fi-tr-auction services__img" aria-hidden="true"></span>
@@ -147,7 +147,7 @@
                 <p class="services__text"> Advokatska kancelarija Jokanović pruža stručnu pomoć kako fizičkim tako i pravnim licima, u svim fazama krivičnog postupka.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
 
@@ -157,7 +157,7 @@
                 <p class="services__text">Porodično pravo obuhvata širok spektar pitanja koja se tiču odnosa unutar porodice, uključujući brak, razvod, starateljstvo, izdržavanje.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
 
@@ -167,7 +167,7 @@
                 <p class="services__text">Nasledno pravo regulise prenos vlasnistva nad imovinom od preminule osobe na naslednike. Nasleđivanje može biti jednostavan proces.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
 
@@ -177,7 +177,7 @@
                 <p class="services__text"> Ugovorno pravo regulise pravne odnose između stranaka koje su se dogovorile da izvrse određene obaveze prema prethodnim uslovima.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
 
@@ -187,7 +187,7 @@
                 <p class="services__text">Pod pojmom stete podrazumeva se umanjenje necije imovine ( obicna steta) I sprecavanje njenog uvecanja ( izmakla korist).</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
 
@@ -197,7 +197,7 @@
                 <p class="services__text">Parnični postupak je uređen Zakonom o parničnom postupku. Ovim se zakonom uređuju pravila postupka za pružanje pravne zaštite</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
 
@@ -207,7 +207,7 @@
                 <p class="services__text">Privredno pravo je grana prava koja se bavi regulisanjem pravnih odnosa u oblasti poslovanja, trgovine i drugih ekonomskih aktivnosti.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
                     vidi više
-                    <span class="fa-solid fa-arrow-right services__icon" aria-hidden="true"></span>
+                    <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
                 </a>
             </li>
          </main>
@@ -215,12 +215,16 @@
     <!-- Services section ends -->
 
 
+
+
+
     <!-- CTA section starts -->
     <section class="cta" id="consultation">
 
         <div class="cta__wrapper container">
+
            <header class="cta__header">
-            <h2 class="cta__heading">Zakažite  online konsultacije</h2>
+            <h2 class="cta__heading">Zakažite online konsultacije</h2>
             <p class="cta__text">
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookm arksgrove right at the coast of the Semantics, a large language ocean. A small river named
             </p>
@@ -233,7 +237,7 @@
                 </div>
 
                 <div class="cta__item">
-                    <p class="cta__info">zoom</p>
+                    <p class="cta__info">google meet</p>
                     <p class="cta__desc">mesto</p>
                 </div>
 
@@ -241,36 +245,35 @@
                     <p class="cta__info">5.000</p>
                     <p class="cta__desc">koliko</p>
                 </div>
-<!-- 
-                <div class="cta__item">
-                    <p class="cta__info">45 min</p>
-                    <p class="cta__desc">Trajajnje</p>
-                </div> -->
+           
            </main>
 
-           <a href="#" class="cta__btn">pogledajte termine</a>
+           <a href="https://calendly.com/angelina-pesic93/45min" class="cta__btn">pogledajte termine</a>
         </div>
 
     </section>
     <!-- CTA section ends -->
 
 
+
+
+
     <!-- Contact section starts -->
     <section class="contact" id="contact">
 
-        <h2 class="contact__heading">Besplatne konsultacije</h2>
+        <h2 class="contact__heading">Kontakt</h2>
         <p class="contact__desc">Law is complicate matter. It can cause you a big problem
             if you ignore it. Let us help you!</p>
 
         <form action="" class="contact__form">
 
             <div class="contact__box">
-                <input type="text" placeholder="Ime*" class="contact__input">
-                <input type="email" placeholder="Email*" class="contact__input">
+                <input type="text" placeholder="Ime*" class="contact__input" required>
+                <input type="email" placeholder="Email*" class="contact__input" required>
             </div>
 
-            <input type="text" placeholder="Telefon*" class="contact__input">
-            <textarea class="contact__input" placeholder="Poruka*"></textarea>
+            <input type="text" placeholder="Telefon*" class="contact__input" required>
+            <textarea class="contact__input" placeholder="Poruka*" required></textarea>
 
             <button class="contact__btn">Pošaljite</button>
         </form>
@@ -278,8 +281,12 @@
     </section>
     <!-- Contact section ends -->
 
-      <!-- Footer section starts -->
-      <footer class="footer">
+
+
+
+
+    <!-- Footer section starts -->
+    <footer class="footer">
 
         <div class="footer__wrapper container">
        
@@ -326,7 +333,7 @@
 
             <article class="footer__item">
                 <a href="index.html" class="logo">
-                    <img src="src/img/logo.svg" 
+                    <img src="src/img/advokatska-kancelarija-beograd-logo.webp" 
                         alt="Advokatska kancelarija LLD Beograd - Logo" 
                         width="220" height="170">
                 </a>
