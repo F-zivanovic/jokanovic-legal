@@ -23,12 +23,7 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
@@ -45,6 +40,10 @@ section {
 a {
   transition: 0.4s linear;
 }
+a:focus-visible {
+  text-decoration: underline;
+  outline: 2px dashed #444;
+}
 
 .container {
   width: 80%;
@@ -54,6 +53,32 @@ a {
   .container {
     width: 90%;
   }
+}
+
+.arrow__up {
+  position: fixed;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  width: 45px;
+  height: 45px;
+  background-color: #1d1d1d;
+  line-height: 45px !important;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #1d1d1d;
+  transform: translateX(200px);
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+.arrow__up:hover {
+  background: transparent;
+  color: #1d1d1d;
+}
+.arrow__up.active {
+  transform: translateX(0);
 }
 
 .top-nav {
@@ -80,9 +105,6 @@ a {
 .top-nav__link:hover {
   color: #868686;
 }
-.top-nav__location {
-  color: #fff;
-}
 .top-nav .fa-solid {
   margin-right: 0.1rem;
   font-size: 15px;
@@ -94,6 +116,14 @@ a {
   background-attachment: fixed;
   height: 100vh;
 }
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 0;
+  }
+}
+.hero--sm {
+  height: 60vh;
+}
 .hero .nav {
   display: flex;
   justify-content: space-between;
@@ -102,19 +132,7 @@ a {
   gap: 0;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 0 2rem;
-}
-@media (max-width: 1100px) {
-  .hero .nav {
-    position: fixed;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 100;
-    background-color: #fff;
-  }
+  position: relative;
 }
 .hero .nav__img {
   width: 90px;
@@ -123,11 +141,22 @@ a {
 .hero .nav__list {
   display: flex;
   gap: 1.5rem;
+  transition: 0.4s linear;
 }
-@media (max-width: 850px) {
+@media (max-width: 992px) {
   .hero .nav__list {
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
+}
+.hero .nav__list.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .hero .nav__link {
   color: #3c3e6b;
@@ -138,21 +167,23 @@ a {
 }
 .hero .nav__btn {
   background-color: #3c3e6b;
+  color: #fff;
+  border: 2px solid #3c3e6b;
   padding: 1rem 1.5rem;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #fff;
-  border: 2px solid #3c3e6b;
+  transition: 0.4s linear;
+  cursor: pointer;
 }
 .hero .nav__btn:hover {
-  background: transparent;
+  background-color: transparent;
   color: #3c3e6b;
 }
-@media (max-width: 850px) {
+@media (max-width: 576px) {
   .hero .nav__btn {
-    display: none;
+    padding: 1rem;
   }
 }
 .hero .nav__hamburger {
@@ -160,7 +191,7 @@ a {
   cursor: pointer;
   font-size: 2rem;
 }
-@media (max-width: 850px) {
+@media (max-width: 992px) {
   .hero .nav__hamburger {
     display: block;
   }
@@ -181,6 +212,14 @@ a {
     text-align: center;
   }
 }
+.hero__wrapper--sm {
+  height: 30vh;
+}
+@media (max-width: 1100px) {
+  .hero__wrapper--sm {
+    height: 40vh;
+  }
+}
 .hero__heading {
   font-size: 3rem;
   max-width: 850px;
@@ -199,19 +238,27 @@ a {
   }
 }
 .hero__btn {
-  color: #3c3e6b;
   background-color: #fff;
+  color: #3c3e6b;
+  border: 2px solid #3c3e6b;
   padding: 1rem 1.5rem;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  border: 2px solid #3c3e6b;
-  margin-top: 1rem;
+  transition: 0.4s linear;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1.5rem;
 }
 .hero__btn:hover {
-  background: #3c3e6b;
+  background-color: #3c3e6b;
   color: #fff;
+}
+@media (max-width: 576px) {
+  .hero__btn {
+    padding: 1rem;
+  }
 }
 
 .about {
@@ -239,6 +286,11 @@ a {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  .about__text {
+    text-align: justify;
+  }
+}
 .about__img {
   position: absolute;
   top: auto;
@@ -260,8 +312,8 @@ a {
   text-align: center;
 }
 .services__heading {
-  font-size: 2.5rem;
   color: #3c3e6b;
+  font-size: 2.5rem;
 }
 .services__list {
   display: flex;
@@ -272,20 +324,26 @@ a {
   row-gap: 3rem;
   margin-top: 3rem;
 }
-@media (max-width: 1200px) {
-  .services__list {
-    flex-direction: column;
-  }
-}
 .services__item {
   flex: 0 0 31%;
   border: 1px solid #868686;
   padding: 2rem;
   border-radius: 5px;
   transition: 0.2s linear;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .services__item:hover {
   transform: translateY(-20px);
+}
+@media (max-width: 1200px) {
+  .services__item {
+    flex: 0 0 45%;
+  }
+}
+@media (max-width: 768px) {
+  .services__item {
+    flex: 0 0 100%;
+  }
 }
 .services__item--bg {
   background-color: #3c3e6b;
@@ -295,10 +353,6 @@ a {
 .services__item--bg .services__text,
 .services__item--bg .services__btn {
   color: #fff;
-}
-.services__img {
-  color: #3c3e6b;
-  font-size: 3rem;
 }
 .services__title {
   font-size: 1.3rem;
@@ -326,14 +380,13 @@ a {
 .cta {
   background-image: linear-gradient(rgba(60, 62, 107, 0.8), rgba(60, 62, 107, 0.8)), url("../../src/img/advokatska-kancelarija-beograd.webp");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   color: #fff;
 }
 .cta__wrapper {
   border: 1px solid #868686;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -352,32 +405,50 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-flow: row;
+  gap: 0;
+}
+@media (max-width: 992px) {
+  .cta__body {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 .cta__info {
   font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+@media (max-width: 576px) {
+  .cta__info {
+    font-size: 1.5rem;
+  }
 }
 .cta__desc {
-  text-transform: uppercase;
   font-weight: 500;
   margin-top: 0.5rem;
+  text-transform: uppercase;
 }
 .cta__btn {
-  color: #3c3e6b;
   background-color: #fff;
+  color: #3c3e6b;
+  border: 2px solid #3c3e6b;
   padding: 1rem 1.5rem;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  border: 2px solid #3c3e6b;
-  margin-top: 1rem;
+  transition: 0.4s linear;
+  cursor: pointer;
   align-self: center;
 }
 .cta__btn:hover {
-  background: #3c3e6b;
+  background-color: #3c3e6b;
   color: #fff;
+}
+@media (max-width: 576px) {
+  .cta__btn {
+    padding: 1rem;
+  }
 }
 
 .service {
@@ -435,23 +506,53 @@ a {
 .service__link:hover {
   color: #3c3e6b;
 }
+.service__btn {
+  background-color: #3c3e6b;
+  color: #fff;
+  border: 2px solid #3c3e6b;
+  padding: 1rem 1.5rem;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+.service__btn:hover {
+  background-color: transparent;
+  color: #3c3e6b;
+}
+@media (max-width: 576px) {
+  .service__btn {
+    padding: 1rem;
+  }
+}
 
 .contact {
   width: 50%;
-  margin: -150px auto 0;
+  margin: -150px auto 4rem;
   text-align: center;
   background-color: #fff;
   padding: 70px 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1200px) {
+  .contact {
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .contact {
+    width: 80%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 .contact__heading {
   color: #000;
   font-size: 2rem;
   margin-bottom: 1rem;
-}
-.contact__desc {
-  max-width: 450px;
-  margin: auto;
-  line-height: 1.5;
 }
 .contact__form {
   display: flex;
@@ -463,6 +564,11 @@ a {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 1200px) {
+  .contact__box {
+    flex-direction: column;
+  }
+}
 .contact__input {
   width: 100%;
   background-color: #f5f5f5;
@@ -473,13 +579,25 @@ a {
   height: 150px;
 }
 .contact__btn {
-  padding: 16px 25px 18px;
+  background-color: #3c3e6b;
+  color: #fff;
+  border: 2px solid #3c3e6b;
+  padding: 1rem 1.5rem;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  background-color: #3c3e6b;
-  color: #fff;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+.contact__btn:hover {
+  background-color: transparent;
+  color: #3c3e6b;
+}
+@media (max-width: 576px) {
+  .contact__btn {
+    padding: 1rem;
+  }
 }
 
 .footer {
@@ -500,8 +618,18 @@ a {
 .footer__item {
   flex: 0 0 22%;
 }
+.footer__item--logo {
+  align-self: center;
+}
+@media (max-width: 1200px) {
+  .footer__item--logo {
+    align-self: flex-start;
+    order: -1;
+  }
+}
 .footer__title {
   color: #3c3e6b;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 .footer__list {
@@ -512,8 +640,15 @@ a {
   gap: 0.5rem;
 }
 .footer__link {
-  display: block;
   color: #868686;
+}
+.footer__link:hover {
+  color: #3c3e6b;
+}
+.footer .fa-solid,
+.footer .fa-brands {
+  color: #3c3e6b;
+  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -40,8 +40,30 @@
   }
 }
 
+
 @mixin rwd($pixels, $type: max) {
   @media (#{$type}-width: #{$pixels}px) {
     @content;
   }
+}
+
+@mixin btn($bg:$primary-color, $color:#fff, $bg-hover:transparent, $color-hover:$primary-color){
+  background-color: $bg;
+  color: $color;
+  border: 2px solid $primary-color;
+
+  padding: 1rem 1.5rem;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.4s linear;
+  cursor: pointer;
+
+  &:hover{
+      background-color: $bg-hover;
+      color: $color-hover;
+  }
+
+  @include rwd(576){ padding: 1rem; }
 }

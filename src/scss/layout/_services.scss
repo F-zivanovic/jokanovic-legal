@@ -4,18 +4,14 @@
     text-align: center;
 
     &__heading{
-        font-size: 2.5rem;
         color: $primary-color;
+        font-size: 2.5rem;
     }
     
     &__list{
         @include flex(space-between, stretch, wrap);
         row-gap: 3rem;
         margin-top: 3rem;
-
-        @include rwd(1200){
-           flex-direction: column;
-        }
     }
     
     &__item{
@@ -24,8 +20,12 @@
         padding: 2rem;
         border-radius: 5px;
         transition: 0.2s linear;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
         &:hover{ transform: translateY(-20px); }
+
+        @include rwd(1200){ flex: 0 0 45%; }
+        @include rwd(768){ flex: 0 0 100%; }
     }
 
     &__item--bg{
@@ -37,11 +37,6 @@
         .services__btn{
             color: #fff;
         }
-    }
-
-    &__img{
-        color: $primary-color;
-        font-size: 3rem;
     }
 
     &__title{

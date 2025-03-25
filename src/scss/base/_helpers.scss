@@ -11,4 +11,25 @@
 }
 
 
+.arrow__up {
+  @include position(fixed, auto, 20px, 20px, auto, 45px, 45px);
+  background-color: #1d1d1d;
+  line-height: 45px !important;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #1d1d1d;
+  transform: translateX(200px);
+  transition: 0.4s linear;
+  cursor: pointer;
+
+  &:hover{
+    background: transparent;
+    color: #1d1d1d;
+  }
+
+  &.active{ transform: translateX(0); }
+}
+
+
 

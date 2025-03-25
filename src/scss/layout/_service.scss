@@ -6,7 +6,6 @@
     align-items: flex-start;
     color: #000;
 
-
     @include rwd(992){ flex-direction: column; }
 
     &__item{
@@ -19,11 +18,9 @@
         }
     }
 
-  
     &__subtitle{
         text-transform: uppercase;
         font-size: 1rem;
-        // letter-spacing: 1px;
         margin-bottom: 1rem;
     }
 
@@ -54,4 +51,6 @@
 
         &:hover{ color: $primary-color; }
     }
+
+    &__btn{ @include btn(); }
 }

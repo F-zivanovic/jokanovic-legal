@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <meta name="description" content="">
+    <meta name="description" content="Advokatska kancelarija Jokonoavić je specijalizovana za sve vrste
+    parničnih sporova, jer se više od deset godina bavimo prevashodno parničnim pravom." />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/css/main.css">
@@ -44,10 +45,12 @@
             </a>
         </div>
 
-        <p class="top-nav__location">
+
+        <!-- Location -->
+        <a href="https://maps.app.goo.gl/MisNBPeQF8LUDZZC6" class="top-nav__link">
             <span class="fa-solid fa-location-dot" aria-hidden="true"></span>
             Dragoslava Srejovica 187E, Beograd, Zvezdara
-        </p>
+        </a>
     </section>
     <!-- Top nav section ends -->
 
@@ -64,11 +67,11 @@
                 <img src="src/img/advokatska-kancelarija-beograd-logo.webp" alt="Advokatska kancelarija Jokanović Beograd - logo" class="nav__img" width="90px" height="90px">
             </a>
 
-            <ul class="nav__list">
+            <ul class="nav__list" id="nav-list">
                 <li><a href="index.html" class="nav__link">Početna</a></li>
                 <li><a href="#about" class="nav__link">O nama</a></li>
-                <li><a href="#contact" class="nav__link">Kontakt</a></li>
                 <li><a href="#services" class="nav__link">Usluge</a></li>
+                <li><a href="#contact" class="nav__link">Kontakt</a></li>
                 <li><a href="#consultation" class="nav__link nav__btn">online konsultacije</a></li>
             </ul>
 
@@ -141,8 +144,9 @@
          <h2 class="services__heading">Pravne oblasti</h2>
 
          <ul class="services__list">
+
             <li class="services__item">
-                <span class="fi fi-tr-auction services__img" aria-hidden="true"></span>
+                <img src="src/img/krivicno-pravo.advokat-beograd.png" alt="Advokat za krivično pravo Beograd" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Krivično pravo</h3>
                 <p class="services__text"> Advokatska kancelarija Jokanović pruža stručnu pomoć kako fizičkim tako i pravnim licima, u svim fazama krivičnog postupka.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -152,7 +156,7 @@
             </li>
 
             <li class="services__item services__item--bg">
-                <span class="fi fi-tr-scale-comparison-alt services__img" aria-hidden="true"></span>
+                <img src="src/img/porodicno-pravo-advokat-beograd.png" alt="Advokat za porodično pravo Beograd" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Porodično pravo i razvod braka</h3>
                 <p class="services__text">Porodično pravo obuhvata širok spektar pitanja koja se tiču odnosa unutar porodice, uključujući brak, razvod, starateljstvo, izdržavanje.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -162,7 +166,7 @@
             </li>
 
             <li class="services__item">
-                <span class="fi fi-tr-lawyer-man services__img" aria-hidden="true"></span>
+                <img src="src/img/nasledno-pravo-advokat-beograd.png" alt="Advokat za nasledno pravo Beograd" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Nasledno pravo</h3>
                 <p class="services__text">Nasledno pravo regulise prenos vlasnistva nad imovinom od preminule osobe na naslednike. Nasleđivanje može biti jednostavan proces.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -172,7 +176,7 @@
             </li>
 
             <li class="services__item services__item--bg">
-                <span class="fi fi-tr-lawyer-man services__img" aria-hidden="true"></span>
+                <img src="src/img/ugovorno-pravo-advokat-beograd.png" alt="Advokat za ugovorno pravo" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Ugovorno pravo</h3>
                 <p class="services__text"> Ugovorno pravo regulise pravne odnose između stranaka koje su se dogovorile da izvrse određene obaveze prema prethodnim uslovima.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -182,7 +186,7 @@
             </li>
 
             <li class="services__item">
-                <span class="fi fi-tr-lawyer-man services__img" aria-hidden="true"></span>
+                <img src="src/img/naknada-stete-advokat-beograd.png" alt="Advokat za naknadu štete" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Naknada štete</h3>
                 <p class="services__text">Pod pojmom stete podrazumeva se umanjenje necije imovine ( obicna steta) I sprecavanje njenog uvecanja ( izmakla korist).</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -192,7 +196,7 @@
             </li>
 
             <li class="services__item services__item--bg">
-                <span class="fi fi-tr-lawyer-man services__img" aria-hidden="true"></span>
+                <img src="src/img/parnica-advokat-beograd.png" alt="Parnični advokat Beograd" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Opšta parnica</h3>
                 <p class="services__text">Parnični postupak je uređen Zakonom o parničnom postupku. Ovim se zakonom uređuju pravila postupka za pružanje pravne zaštite</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -202,7 +206,7 @@
             </li>
 
             <li class="services__item">
-                <span class="fi fi-tr-lawyer-man services__img" aria-hidden="true"></span>
+                <img src="src/img/privredno-pravo-advokat-beograd.png" alt="Advokat za privredno pravo Beograd" aria-hidden="true" width="60px" height="60px">
                 <h3 class="services__title">Privredno pravo</h3>
                 <p class="services__text">Privredno pravo je grana prava koja se bavi regulisanjem pravnih odnosa u oblasti poslovanja, trgovine i drugih ekonomskih aktivnosti.</p>
                 <a href="krivicno-pravo.html" class="services__btn">
@@ -223,13 +227,8 @@
 
         <div class="cta__wrapper container">
 
-           <header class="cta__header">
             <h2 class="cta__heading">Zakažite online konsultacije</h2>
-            <p class="cta__text">
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookm arksgrove right at the coast of the Semantics, a large language ocean. A small river named
-            </p>
-           </header>
-
+  
            <main class="cta__body">
                 <div class="cta__item">
                     <p class="cta__info">45 min</p>
@@ -237,12 +236,12 @@
                 </div>
 
                 <div class="cta__item">
-                    <p class="cta__info">google meet</p>
+                    <p class="cta__info">Google meet</p>
                     <p class="cta__desc">mesto</p>
                 </div>
 
                 <div class="cta__item">
-                    <p class="cta__info">5.000</p>
+                    <p class="cta__info">5.000rsd</p>
                     <p class="cta__desc">koliko</p>
                 </div>
            
@@ -262,8 +261,6 @@
     <section class="contact" id="contact">
 
         <h2 class="contact__heading">Kontakt</h2>
-        <p class="contact__desc">Law is complicate matter. It can cause you a big problem
-            if you ignore it. Let us help you!</p>
 
         <form action="" class="contact__form">
 
@@ -290,66 +287,127 @@
 
         <div class="footer__wrapper container">
        
-
             <article class="footer__item">
                 <h3 class="footer__title">Kontakt</h3>
-                <address>
-                    <p class="contact__address">Dragoslava Srejovica 187E, Beograd</p>
-                    <ul class="footer__list">
-                        <li>
-                            <a href="tel:+38163267679" class="footer__link" aria-label="Pozovite nas na broj +38163267679">+381644631503</a>
-                        </li>
-                        <li>
-                            <a href="mailto:dimitrije.lukic@lld-advokati.rs" class="footer__link" aria-label="Pošaljite nam email" >
-                                angelina.pesic93@gmail.com
-                            </a>
-                        </li>
-                    </ul>
-                </address>
-            </article>
-
-            <article class="footer__item">
-                <h3 class="footer__title">Pravne oblasti</h3>
                 <ul class="footer__list">
-                    <li><a href="privredno-pravo.html" class="footer__link">Privredno pravo</a></li>
-                    <li><a href="nepokretnosti.html" class="footer__link">Nepokretnosti</a></li>
-                    <li><a href="resavanje-sporova.html" class="footer__link">Rešavanje sporova</a></li>
-                    <li><a href="radno-pravo.html" class="footer__link">Radno pravo</a></li>
-                    <li><a href="imigraciono-pravo.html" class="footer__link">Imigraciono pravo</a></li>
-                    <li><a href="zastita-podataka.html" class="footer__link">Zaštita podataka</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/angelina-pesic-87150a171/" class="footer__link">
+                            <span class="fa-brands fa-linkedin" aria-hidden="true"></span>Angelina Jokanović
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+381644631503" class="footer__link">
+                            <span class="fa-solid fa-phone" aria-hidden="true"></span>+381644631503
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:angelina.pesic93@gmail.com" class="footer__link">
+                            <span class="fa-solid fa-envelope" aria-hidden="true"></span>angelina.pesic93@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://maps.app.goo.gl/MisNBPeQF8LUDZZC6" class="footer__link">
+                            <span class="fa-solid fa-location-dot" aria-hidden="true"></span>Dragoslava Srejovica 187E, Beograd, Zvezdara
+                        </a>
+                    </li>
                 </ul>
             </article>
 
             <article class="footer__item">
                 <h3 class="footer__title">Linkovi</h3>
                 <ul class="footer__list">
-                    <li><a href="index.html" class="footer__link" aria-current="page">Početna</a></li>
-                    <li><a href="#about" class="footer__link">O nama</a></li>
-                    <li><a href="#team" class="footer__link">Blog</a></li>
-                    <li><a href="#contact" class="footer__link">Kontakt</a></li>
-                    <li><a href="#consultation" class="footer__link">Online konsultacije</a></li>
+                    <li>
+                        <a href="index.html" class="footer__link">
+                             <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Početna
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">
+                             <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>O nama
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">
+                             <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Kontakt
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#consultation" class="footer__link">
+                             <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Online konsultacije
+                        </a>
+                    </li>
                 </ul>
             </article>
 
             <article class="footer__item">
-                <a href="index.html" class="logo">
+                <h3 class="footer__title">Pravne oblasti</h3>
+                <ul class="footer__list">
+                    <li>
+                        <a href="ugovorno-pravo.html" class="footer__link">
+                            <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Ugovorno pravo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="privredno-pravo.html" class="footer__link">
+                            <span class="fa-solid fa-chevron-right"></span>Privredno pravo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="nasledno-pravo.html" class="footer__link">
+                            <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Nasledno pravo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="krivicno-pravo.html" class="footer__link">
+                            <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Krivično pravo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="porodicno-pravo.html" class="footer__link">
+                            <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Porodično pravo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="naknada-stete.html" class="footer__link">
+                            <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>Naknada štete
+                        </a>
+                    </li>
+                    <li>
+                        <a href="opsta-parnica.html" class="footer__link">
+                            <i class="fa-solid fa-chevron-right"></i>Opšta parnica
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="footer__item footer__item--logo">
+                <a href="index.html">
                     <img src="src/img/advokatska-kancelarija-beograd-logo.webp" 
-                        alt="Advokatska kancelarija LLD Beograd - Logo" 
-                        width="220" height="170">
+                         alt="Advokatska kancelarija Jokanović Beograd - logo" 
+                         class="nav__img" 
+                         width="150px" 
+                         height="120px">
                 </a>
             </article>
-        </div>
 
-          <!-- Copyright Section -->
-          <!-- <div class="footer__copyright container">
-            <p>&copy; <span id="year"></span> LLD Advokati. Sva prava zadržana. | 
-                <a href="privacy-policy.html" class="footer__link">Politika privatnosti</a> | 
-                <a href="terms-of-service.html" class="footer__link">Uslovi korišćenja</a>
-            </p>
-        </div> -->
+        </div>
 
     </footer>
     <!-- Footer section ends -->
+
+
+
+
+
+    <!-- Scroll to top -->
+    <i class="arrow__up fa-solid fa-chevron-up" id="arrow-up" aria-hidden="true"></i>
+
+
+
+
+    
+    <!-- Custom JS -->
+     <script src="src/js/main.js"></script>
 
 </body>
 

@@ -3,7 +3,6 @@
 .footer{
     padding: 70px 0 0;
     border-top: 2px solid $primary-color;
-    // background-color: #1d1d1d;
 
     &__wrapper{
         display: flex;
@@ -14,23 +13,38 @@
         @include rwd(1200){ flex-direction: column; }
     }
 
-    &__item{ flex: 0 0 22%; }
+    &__item{ 
+        flex: 0 0 22%;
+        
+        &--logo{ 
+            align-self: center;
+
+            @include rwd(1200){
+                align-self: flex-start;
+                order: -1;
+            }
+         }
+    }
 
     &__title{
         color: $primary-color;
+        font-size: 1.5rem;
         margin-bottom: 2rem;
     }
 
-
-    &__list{ @include flex(flex-start, stretch, column, 0.5rem); }
-
-    &__link{
-        display: block;
-        color: $text-color;
-
-        // &:hover,
-        // &:focus{ color: #fff;}
+    &__list{ 
+        @include flex(flex-start, stretch, column, 0.5rem); 
     }
 
- 
+    &__link{
+        color: $text-color;
+
+        &:hover{ color: $primary-color; }
+    }
+
+    .fa-solid,
+    .fa-brands{
+        color: $primary-color;
+        margin-right: 0.5rem;
+    }
 }

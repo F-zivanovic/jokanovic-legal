@@ -3,14 +3,13 @@
 .cta{
     background-image:linear-gradient(rgba(60, 62, 107, 0.8), rgba(60, 62, 107, 0.8)), url('../../src/img/advokatska-kancelarija-beograd.webp');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     text-align: center;
     color: #fff;
 
     &__wrapper{
         border: 1px solid $text-color;
-        padding: 4rem 0;
+        padding: 4rem 2rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -29,38 +28,29 @@
     }
 
     &__body{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flex(space-around, center, row);
+
+        @include rwd(992){
+            flex-direction: column;
+            gap: 2rem;
+        }
     }
 
     &__info{
         font-weight: 700;
-        font-size: 2rem;
-        text-transform: uppercase;
+        font-size: 1.8rem;
+
+        @include rwd(576){ font-size: 1.5rem; }
     }
 
     &__desc{
-        text-transform: uppercase;
         font-weight: 500;
         margin-top: 0.5rem;
+        text-transform: uppercase;
     }
 
     &__btn{
-        color: $primary-color;
-        background-color: #fff;
-        padding: 1rem 1.5rem;
-        font-size: 13px;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 1px;
-        border: 2px solid $primary-color;
-        margin-top: 1rem;
+        @include btn(#fff, $primary-color, $primary-color, #fff);
         align-self: center;
-
-        &:hover{
-            background: $primary-color;
-            color: #fff;
-        }
     }
 }

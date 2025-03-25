@@ -23,6 +23,8 @@
         margin-bottom: 1rem;
         position: relative;
         z-index: 1;
+
+        @include rwd(768){ text-align: justify; }
     }
 
     &__img{
