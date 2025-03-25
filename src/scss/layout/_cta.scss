@@ -3,17 +3,14 @@
 .cta{
     background-image:linear-gradient(rgba(60, 62, 107, 0.8), rgba(60, 62, 107, 0.8)), url('../../src/img/advokatska-kancelarija-beograd.webp');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
     color: #fff;
+    text-align: center;
 
     &__wrapper{
         border: 1px solid $text-color;
-        padding: 4rem 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding-bottom: 10rem;
+        padding: 4rem 2rem 10rem;
     }
 
     &__heading{
@@ -21,36 +18,33 @@
         margin-bottom: 1rem;
     }
 
-    &__text{
-        max-width: 750px;
-        line-height: 1.7;
+    &__body{
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    &__number{
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        display: block;
+        line-height: 50px;
         margin: auto;
     }
 
-    &__body{
-        @include flex(space-around, center, row);
-
-        @include rwd(992){
-            flex-direction: column;
-            gap: 2rem;
-        }
-    }
-
-    &__info{
+    &__title{
         font-weight: 700;
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
 
-        @include rwd(576){ font-size: 1.5rem; }
+        @include rwd(768){ font-size: 1.5rem } 
     }
 
-    &__desc{
-        font-weight: 500;
-        margin-top: 0.5rem;
-        text-transform: uppercase;
-    }
 
-    &__btn{
-        @include btn(#fff, $primary-color, $primary-color, #fff);
-        align-self: center;
-    }
+    &__btn{ @include btn($primary-color, #fff, #fff); }
 }

@@ -380,57 +380,49 @@ a:focus-visible {
 .cta {
   background-image: linear-gradient(rgba(60, 62, 107, 0.8), rgba(60, 62, 107, 0.8)), url("../../src/img/advokatska-kancelarija-beograd.webp");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
   color: #fff;
+  text-align: center;
 }
 .cta__wrapper {
   border: 1px solid #868686;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-bottom: 10rem;
+  padding: 4rem 2rem 10rem;
 }
 .cta__heading {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-.cta__text {
-  max-width: 750px;
-  line-height: 1.7;
+.cta__body {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.cta__number {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  line-height: 50px;
   margin: auto;
 }
-.cta__body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row;
-  gap: 0;
-}
-@media (max-width: 992px) {
-  .cta__body {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-.cta__info {
+.cta__title {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
-@media (max-width: 576px) {
-  .cta__info {
+@media (max-width: 768px) {
+  .cta__title {
     font-size: 1.5rem;
   }
 }
-.cta__desc {
-  font-weight: 500;
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-}
 .cta__btn {
-  background-color: #fff;
-  color: #3c3e6b;
+  background-color: #3c3e6b;
+  color: #fff;
   border: 2px solid #3c3e6b;
   padding: 1rem 1.5rem;
   font-size: 13px;
@@ -439,11 +431,10 @@ a:focus-visible {
   letter-spacing: 1px;
   transition: 0.4s linear;
   cursor: pointer;
-  align-self: center;
 }
 .cta__btn:hover {
-  background-color: #3c3e6b;
-  color: #fff;
+  background-color: #fff;
+  color: #3c3e6b;
 }
 @media (max-width: 576px) {
   .cta__btn {
@@ -477,6 +468,7 @@ a:focus-visible {
   text-transform: uppercase;
   font-size: 1rem;
   margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 .service__text {
   line-height: 1.7;
@@ -485,6 +477,9 @@ a:focus-visible {
 }
 .service__text--divider {
   margin-top: 1.5rem;
+}
+.service__text span {
+  font-weight: bold;
 }
 .service__list {
   margin-bottom: 1.5rem;
@@ -517,6 +512,8 @@ a:focus-visible {
   letter-spacing: 1px;
   transition: 0.4s linear;
   cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
 }
 .service__btn:hover {
   background-color: transparent;

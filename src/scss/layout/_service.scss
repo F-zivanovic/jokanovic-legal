@@ -22,6 +22,7 @@
         text-transform: uppercase;
         font-size: 1rem;
         margin-bottom: 1rem;
+        font-family: "Poppins", sans-serif;
     }
 
     &__text{
@@ -30,6 +31,8 @@
         text-align: justify;
 
         &--divider{ margin-top: 1.5rem; }
+
+        span{ font-weight:  bold; }
     }
 
     &__list{
@@ -52,5 +55,9 @@
         &:hover{ color: $primary-color; }
     }
 
-    &__btn{ @include btn(); }
+    &__btn{ 
+        @include btn();
+        margin-top: 1rem;
+        display: inline-block;
+     }
 }
