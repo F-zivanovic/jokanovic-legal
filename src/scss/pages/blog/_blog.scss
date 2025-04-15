@@ -38,4 +38,8 @@
 
         &:hover{ color: $text-color; }
     }
+
+    &__date{
+        color: $primary-color;
+    }
 }

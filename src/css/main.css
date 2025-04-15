@@ -797,6 +797,9 @@ a:focus-visible {
 .blog__link:hover {
   color: #868686;
 }
+.blog__date {
+  color: #3c3e6b;
+}
 
 .bp {
   color: #000;
