@@ -1,8 +1,10 @@
 @use '../abstract/index' as *;
 
 .footer{
+    background-color: $primary-color;
+    color: $white-color;
+
     padding: 70px 0 0;
-    border-top: 2px solid $primary-color;
 
     &__wrapper{
         display: flex;
@@ -16,35 +18,49 @@
     &__item{ 
         flex: 0 0 22%;
         
-        &--logo{ 
-            align-self: center;
+        // &--logo{ 
+        //     align-self: center;
 
-            @include rwd(1200){
-                align-self: flex-start;
-                order: -1;
-            }
-         }
+        //     @include rwd(1200){
+        //         align-self: flex-start;
+        //         order: -1;
+        //     }
+        //  }
     }
 
-    &__title{
-        color: $primary-color;
+    &__heading{
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
 
-    &__list{ 
-        @include flex(flex-start, stretch, column, 0.5rem); 
+    &__list{
+         @include flex(flex-start, stretch, column, 0.5rem); 
+        
+         &--space{
+            
+             li{ 
+                display: flex;
+                justify-content: space-between;
+            }
+         }
     }
 
     &__link{
-        color: $text-color;
+        color: $white-color;
 
-        &:hover{ color: $primary-color; }
+        &:hover{ color: $text-color; }
     }
 
     .fa-solid,
     .fa-brands{
-        color: $primary-color;
+        color: $white-color;
+
         margin-right: 0.5rem;
+    }
+
+    &__copy{
+        border-top: 1px solid $white-color;
+
+        padding: 1rem 10%;
     }
 }

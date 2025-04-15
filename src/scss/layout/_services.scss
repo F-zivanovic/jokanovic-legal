@@ -7,15 +7,21 @@
         color: $primary-color;
         font-size: 2.5rem;
     }
+
+    &__subheading{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
     
     &__list{
-        @include flex(space-between, stretch, wrap);
+        @include flex(flex-start, stretch, wrap, 3rem);
         row-gap: 3rem;
         margin-top: 3rem;
     }
     
     &__item{
-        flex: 0 0 31%;
+        flex:30%;
         border:1px solid $text-color;
         padding: 2rem;
         border-radius: 5px;
@@ -34,25 +40,34 @@
         .services__img,
         .services__title,
         .services__text,
-        .services__btn{
-            color: #fff;
+        .services__link{
+            color: $white-color;
         }
     }
 
+    &__img{
+        width: 60px;
+        height: 60px;
+    }
+
     &__title{
+        color: $black-color;
+
+        margin-top: 1rem;
         font-size: 1.3rem;
-        color: #000;
     }
 
     &__text{
         color: $primary-color;
+
         font-size: 0.9rem;
         line-height: 1.7;
         margin:1rem 0;
     }
 
-    &__btn{
+    &__link{
         color: $primary-color;
+
         text-transform: uppercase;
         font-size: 0.8rem;
         font-weight: 500;

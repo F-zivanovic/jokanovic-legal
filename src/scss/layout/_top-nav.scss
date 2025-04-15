@@ -1,10 +1,17 @@
 @use '../abstract/index' as *;
 
 .top-nav{
-    @include flex(space-between);
+    @include flex(space-between, center);
     background-color: $primary-color;
-    padding: 1rem 10%;
 
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0 10%;
+    
     @include rwd(1200){ display: none; }
 
     &__contact{
@@ -13,13 +20,14 @@
     }
 
     &__link{
-        color: #fff;
+        color: $white-color;
 
         &:hover{ color: $text-color; }
     }
 
     .fa-solid{
         margin-right: 0.1rem;
-        font-size: 15px;
+        font-size: 0.9rem;
     }
 }
+

@@ -2,8 +2,9 @@
 
 .about{
     background-color: $primary-color;
+    color: $white-color;
+
     position: relative;
-    color: #fff;
 
     &__item{
         width: 70%;
@@ -12,7 +13,7 @@
         @include rwd(992){ width: 90%; }
     }
 
-    &__title{
+    &__heading{
         font-size: 2.5rem;
         font-weight: 600;
         margin-bottom: 1rem;

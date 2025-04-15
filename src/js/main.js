@@ -1,23 +1,39 @@
-// Open/close mobile menu
-const hamburgerIcon = document.getElementById('hamburger');
+const navHamburgerIcon = document.getElementById('nav-hamburger');
 const navList = document.getElementById('nav-list');
-const navLinks = navList.querySelectorAll('a');
+const navItemDropdown = document.getElementById('nav-item-dropdown');
+const navLinkToggle = document.getElementById('nav-link-toggle');
 
-hamburgerIcon.addEventListener('click', ()=>{ navList.classList.toggle('active'); })
 
-// Close mobile menu when click on link in nav list
-navLinks.forEach((link)=>{
-    link.addEventListener('click', ()=>{
-        navList.classList.remove('active');
-    });
-})
-
-// Close mobile menu on screen > 1200px
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 1200) {
-        navList.classList.remove('active');
-    }
+// Open/close mobile menu and animate hamburger icon
+navHamburgerIcon.addEventListener('click', ()=>{
+  navList.classList.toggle('active');
+  navHamburgerIcon.classList.toggle('open');
 });
+
+// Open/close submenu/dropdown 
+navLinkToggle.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  navItemDropdown.classList.toggle('active');
+});
+
+
+// Close submenu/dropdown
+document.addEventListener('click', (e)=>{
+  if(!navItemDropdown.contains(e.target)){
+    navItemDropdown.classList.remove('active');
+  }
+});
+
+
+// Close mobile menu and dropdown menu on width larger than 992
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 992) {
+    navList.classList.remove('active');
+    navHamburgerIcon.classList.remove('open');
+    navItemDropdown.classList.remove('active');
+  }
+});
+
 
 // Arrow up icon
 const arrowUp = document.getElementById('arrow-up');
@@ -36,3 +52,5 @@ scrollBtn.addEventListener("click", () => {
   window.scroll({ top: 0, behavior: "smooth" });
 });
 
+// Dynamic date
+document.getElementById("year").textContent = new Date().getFullYear();

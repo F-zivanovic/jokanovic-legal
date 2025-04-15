@@ -1,15 +1,27 @@
+// Abstract
 @use "./abstract/variables";
 @use "./abstract/mixins";
 
+
+// Base
 @use "./base/base";
 @use "./base/helpers";
 
+
+// Layout
 @use 'layout/top-nav';
+@use 'layout/nav';
+@use 'layout/footer';
+
+
+// Pages
 @use 'layout/hero';
 @use 'layout/about';
 @use 'layout/services';
 @use 'layout/cta';
 @use 'layout/service';
 @use 'layout/contact';
-@use 'layout/footer';
+
+@use 'pages/blog/blog';
+@use 'pages/blog/single-blog';
 

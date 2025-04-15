@@ -1,0 +1,41 @@
+@use '../../abstract/index' as *;
+
+.blog{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item{
+        flex: 0 0 30%;
+
+        @include rwd(1200){ flex: 0 0 47%; }
+        @include rwd(768){ flex: 0 0 100%; }
+    }
+
+    &__heading{
+        color: $black-color;
+
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        &:hover{ color: $primary-color; }
+    }
+
+    &__desc{
+        color: $black-color;
+
+        text-align: justify;
+        margin-top: 1rem;
+    }
+
+    &__link{
+        color: $primary-color;
+
+        margin-top: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: inline-block;
+
+        &:hover{ color: $text-color; }
+    }
+}

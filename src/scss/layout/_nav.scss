@@ -1,0 +1,137 @@
+@use '../abstract/index' as *;
+
+.nav{
+    @include flex(space-between, center);
+    background-color: $white-color;
+    
+    position: fixed;
+    top: 7vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 10%;
+    z-index: 10;
+
+    @include rwd(1200){ top: 0; }
+
+    &__img{
+        width: 90px;
+        height: 90px;
+    }
+
+    &__list{
+        display: flex;
+        gap: 1.5rem;
+        transition: 0.4s linear;
+
+        @include rwd(992){ 
+            background-color: $white-color;
+
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            right: 0%;
+            flex-direction: column;
+            padding: 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        &.active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    }
+
+    &__item--dropdown{
+        position: relative;
+
+        .fa-solid{ color: $primary-color; }
+
+        &.active .nav__dropdown{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @include rwd(992){ &.active .nav__dropdown{ display: flex;} }
+    }
+
+    &__dropdown{
+        background-color: $primary-color;
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: 0.4s linear;
+        z-index: 10;
+
+        @include rwd(992){
+            position: static;
+            transform: none;
+            opacity: 1;
+            visibility: visible;
+            box-shadow: none;
+            padding-left: 1rem;
+            display: none;
+        }
+
+        a{
+            color: $white-color;
+
+            font-size: 0.9rem;
+            white-space: nowrap;
+
+            &:hover{ color: $text-color;}
+        }
+    }
+
+    &__link{
+        color: $primary-color;
+
+        font-weight: 600;
+        background: none;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover,
+        &:hover + .fa-solid{ 
+            color: $text-color;
+
+            transition: 0.4s linear
+         }
+
+         &--toggle{
+            display: flex;
+            align-items: flex-start;
+            gap: 0.2rem
+         }
+    }
+
+    &__btn{ @include btn; }
+
+    .nav__hamburger{
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        @include rwd(992){ display: flex; }
+
+        &.open .nav__line:nth-child(1){ transform: rotate(45deg) translate(5px, 5px);}
+        &.open .nav__line:nth-child(2){ opacity: 0;}
+        &.open .nav__line:nth-child(3){ transform: rotate(-45deg) translate(5px, -5px);}
+    }
+
+    &__line{
+        background: $black-color;
+
+        width: 1.5rem;
+        height: 3px;
+        transition: 0.3s ease;
+    }
+}
