@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  list-style-type: none;
   text-decoration: none;
   border: none;
   outline: none;
@@ -29,6 +28,8 @@ img {
   object-fit: cover;
   vertical-align: middle;
 }
+
+ul{   list-style-type: none; }
 
 section { padding: 70px 0; }
 
